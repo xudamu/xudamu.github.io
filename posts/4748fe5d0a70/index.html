@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试 | 自己愛的な人です</title><meta name="author" content="许木"><meta name="copyright" content="许木"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="首先我也是创建完这个blog的看板娘后发现的live2DviewerEX，突发奇想能不能将Live2DViewerEX里面的看板娘导出来，结果发现格式不一样，这里是被加密过的，于是乎就开始在网上搜索解密。在我实现过程中，网上生成mono-2.0-bdwgc.dll对我这种对于vs和dnspy不熟悉的用户有些不友好，然后下面就是我写一份比较完善的指南 介绍首先可以看看Live2DViewerEX文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试">
+<meta property="og:url" content="http://example.com/posts/4748fe5d0a70/index.html">
+<meta property="og:site_name" content="自己愛的な人です">
+<meta property="og:description" content="首先我也是创建完这个blog的看板娘后发现的live2DviewerEX，突发奇想能不能将Live2DViewerEX里面的看板娘导出来，结果发现格式不一样，这里是被加密过的，于是乎就开始在网上搜索解密。在我实现过程中，网上生成mono-2.0-bdwgc.dll对我这种对于vs和dnspy不熟悉的用户有些不友好，然后下面就是我写一份比较完善的指南 介绍首先可以看看Live2DViewerEX文件">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.postimg.cc/kgQV00WW/live2d.png">
+<meta property="article:published_time" content="2024-07-18T00:05:23.000Z">
+<meta property="article:modified_time" content="2024-07-18T03:39:57.454Z">
+<meta property="article:author" content="许木">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.postimg.cc/kgQV00WW/live2d.png"><link rel="shortcut icon" href="/img/fav.jpg"><link rel="canonical" href="http://example.com/posts/4748fe5d0a70/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-18 11:39:57'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/styles/main.css"><script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/xudamu/Doro@3/bundle.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.postimg.cc/CxGRhTpQ/e08087412710590d39be232cd643f10f.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.postimg.cc/kgQV00WW/live2d.png')"><nav id="nav"><span id="blog-info"><a href="/" title="自己愛的な人です"><span class="site-name">自己愛的な人です</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-18T00:05:23.000Z" title="发表于 2024-07-18 08:05:23">2024-07-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-18T03:39:57.454Z" title="更新于 2024-07-18 11:39:57">2024-07-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>首先我也是创建完这个blog的看板娘后发现的live2DviewerEX，突发奇想能不能将Live2DViewerEX里面的看板娘导出来，结果发现格式不一样，这里是被加密过的，于是乎就开始在网上搜索解密。在我实现过程中，网上生成mono-2.0-bdwgc.dll对我这种对于vs和dnspy不熟悉的用户有些不友好，然后下面就是我写一份比较完善的指南</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>首先可以看看Live2DViewerEX文件到底长什么样子</p>
+<p>这里原本有三份文件</p>
+<p><img src="https://i.postimg.cc/5N1VtyGY/1.png" alt="img"></p>
+<p>这里的lpk文件后缀可以用zip格式打开，然后解压出来是一些bin3&#x2F;bin文件，里面包含了模型的参数配置，这里是被加密过的，而我们需要的是没被加密过的moc3&#x2F;moc文件，原理上来说，应该是Live2DViewerEX在接受了这些bin后会将其生成为moc3&#x2F;moc。</p>
+<p>厂商会通过给mono-2.0-bdwgc.dll再做加密让我们没法直接破解它的一些逻辑，但其实我们可以自己生成一份没有加密过的mono-2.0-bdwgc.dll，来绕过厂商的限制，在Live2DViewerEX层拿到我们需要的moc文件。可以尝试hook劫持或者破译加密。网上的方法一般是破解加密，但是因为我太菜了，只做到了生成mono-2.0-bdwgc.dll，后面的我也没做。</p>
+<p>另外提一嘴，在解压出来的文件中你可以看到两个没有后缀的文件，其实比较大的那个是模型的图的文件，另一个是模型的json配置文件，如下图</p>
+<p><img src="https://i.postimg.cc/sxrt1Hnd/2.png" alt="img"></p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>然后我们着手去生成mono-2.0-bdwgc.dll文件</p>
+<p>首先使用git下载官方的mono库和另一个工具库dnSpy-Unity-mono</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Unity-Technologies/mono</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/dnSpy/dnSpy-Unity-mono</span><br></pre></td></tr></table></figure>
+
+<p>对于<strong>master分支和dnSpy两个分支</strong>的问题，其实使用git clone 的时候已经拉下来了，只需要进去后使用git checkout切换即可。(如果这里看不懂的话，建议得去搜一下git怎么使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dnSpy</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/hGHFRtTG/3.png" alt="img"></p>
+<p>先去下载一个.NET SDK</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载地址：https://dotnet.microsoft.com/zh-cn/download</span><br></pre></td></tr></table></figure>
+
+<p>然后我们打开vs，注意不是vscode，vscode对sln生成不太好。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载网址：https://visualstudio.microsoft.com/zh-hans/vs/</span><br></pre></td></tr></table></figure>
+
+<p>首先在上面clone的dnspy-unity-mono中找到umpatcher.sln，使用vs打开</p>
+<p><img src="https://i.postimg.cc/zBWszYFF/4.png" alt="img"></p>
+<p>我用的是上面文件夹里面的那个umpatcher.sln，不知道这个对生成有没有关系。在这里右键选择用vs打开然后双击umpatcher.sln也行</p>
+<p><img src="https://i.postimg.cc/5ySDz5GH/5.png" alt="img"></p>
+<p>这里点击生成就行</p>
+<p>然后你就能在类似于这样的地址中找到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\xxxxx\dnSpy-Unity-mono\src\umpatcher\umpatcher\obj\Release\net48</span><br></pre></td></tr></table></figure>
+
+<p>但我建议使用everything找。</p>
+<p>查看当前的mono版本和生成时间</p>
+<p>找到Live2DViewerEX本地文件下的lw.exe，查看版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F:\steam\steamapps\common\Live2DViewerEX\bin\lw</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/gcVC1dJY/6.png" alt="image-20240718090921607"></p>
+<p>那么它的小版本就是2019.4.40，它的大版本是unity-2019.4-mbe</p>
+<p>可以在github中搜到</p>
+<p><img src="https://i.postimg.cc/HL8Kz1R1/7.png" alt="image-20240718091211386"></p>
+<p>打开本地的git，打开mono，使用git checkout 生成&#x2F;切换到这个mbe</p>
+<p><img src="https://i.postimg.cc/gkGCW5X3/8.png" alt="image-20240718091433919"></p>
+<p>然后在这里输入gitk，打开一个新的应用界面，然后在这里翻，找到你的小版本，然后点击即可</p>
+<p><img src="https://i.postimg.cc/sXFL00CQ/9.png" alt="image-20240718091605025"></p>
+<p>点击之后跳转出的这个玩意就是你的commit hash，记录下你的commit hash</p>
+<p><img src="https://i.postimg.cc/dtBKZvPW/10.png" alt="image-20240718091702751"></p>
+<p>下载一个dnspy做为文件分析器，它本来就是用于二进制逆向的一款工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/dnSpy/dnSpy/releases</span><br><span class="line">或者</span><br><span class="line">https://blog.csdn.net/aeaxea43/article/details/108632786</span><br></pre></td></tr></table></figure>
+
+<p>如果dnspy提示需要下什么，就下。</p>
+<p>然后使用dnspy打开steam下的mono-2.0-bdwgc.dll，类似于下面这个地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F:\steam\steamapps\common\Live2DViewerEX\bin\lw\MonoBleedingEdge\EmbedRuntime</span><br></pre></td></tr></table></figure>
+
+<p>然后你就能看到时间戳类似于这样，但下面这个是我新生成的。 记一下你的生成时间，比如我这里是2024&#x2F;7&#x2F;18</p>
+<p><img src="https://i.postimg.cc/ry5Tcxh2/11.png" alt="image-20240718090517082"></p>
+<p>这里时间戳的用处就是比较一下你和在gitk中找到的是否是一致的，如果在那个时间点左右，多少差一点没关系。如果时间跨度很大，那可能是找错了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\xxx\dnSpy-Unity-mono\src\umpatcher\umpatcher\obj\Debug\net48\umpatcher.exe 2019.4.40-mbe 5c72e2513122ba54eb1dcaef03df123ca1a2809b &quot;C:\Users\90674\mono&quot; &quot;C:\Users\xxx\dnSpy-Unity-mono&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.postimg.cc/JzYVKqhZ/12.png" alt="image-20240718101202860"></p>
+<p>这样就是成功了的</p>
+<p>如果报错为Git working tree is not clean. Check in the modified files. (Repo: C:\Users\xxx\dnSpy-Unity-mono)</p>
+<p>那么在git中去到dnSpy-Unity-mono下运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git status 查看有哪些改变</span><br><span class="line"></span><br><span class="line">使用git reset --hard清除</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m &quot;mono&quot; 提交改变</span><br></pre></td></tr></table></figure>
+
+<p>然后使用git status再次查看有哪些改变如果没有了，就再尝试使用umpatcher</p>
+<p>如果出现submodule相关问题，那么就使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
+
+<p>进行更新即可</p>
+<p>最后会生成一个unity-2019.4.40-mbe和其他东西在C:\Users\xxx\dnSpy-Unity-mono文件夹下面</p>
+<p><img src="https://i.postimg.cc/XYY6whnn/13.png" alt="image-20240718102328988"></p>
+<p>如果你下面没有dnSpy-Unity-mono-2019.x.sln等文件的话，可能和文件夹里mono.sln有关？这个我不太清除，你们可以看看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Users\xxx\dnSpy-Unity-mono\unity-2019.4.40-mbe\msvc\mono.sln&quot;</span><br></pre></td></tr></table></figure>
+
+<p>有dnSpy-Unity-mono-2019.x.sln等东西的话，可以去直接在vs中生成一下相应的dll</p>
+<p><img src="https://i.postimg.cc/FKft6Lfq/14.png" alt="image-20240718102721723"></p>
+<p>最后dll文件会出现在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\xxx\dnSpy-Unity-mono\builds\Release\unity-2019.4.40\win64</span><br></pre></td></tr></table></figure>
+
+<p>现在就完成了生成，接下了就将dll文件替换掉live2DviewerEX现有的同名文件，然后再用dnspy进行逆向即可啦&#x2F;这步我不会(悲)</p>
+<p>参考链接：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/2aptx4869/p/16291513.html">Live2DViewerEX 创意工坊文件解密 - 洛绫璃 - 博客园 (cnblogs.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://chr.fan/lpk-decrypt/">Live2DViewerEX 创意工坊lpk文件分析 - 动态调试Unity程序 - α-Lyraeα-Lyrae (chr.fan)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Ricardo0012/article/details/127107350?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-127107350-blog-105102733.235%5Ev43%5Epc_blog_bottom_relevance_base2&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromBaidu~Rate-1-127107350-blog-105102733.235%5Ev43%5Epc_blog_bottom_relevance_base2&utm_relevant_index=1">【逆向工程】生成能够用dnSpy调试的mono-2.0-bdwgc.dll（一）-CSDN博客</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">许木</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/4748fe5d0a70/">http://example.com/posts/4748fe5d0a70/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">自己愛的な人です</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/blog/">blog</a></div><div class="post_share"><div class="social-share" data-image="https://i.postimg.cc/kgQV00WW/live2d.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/f407262d9961/" title="hexo+buuterfly+Cubism5.0自定义看板娘搭建"><img class="cover" src="https://i.postimg.cc/J08PJYCT/doro.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo+buuterfly+Cubism5.0自定义看板娘搭建</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/f407262d9961/" title="hexo+buuterfly+Cubism5.0自定义看板娘搭建"><img class="cover" src="https://i.postimg.cc/J08PJYCT/doro.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-11</div><div class="title">hexo+buuterfly+Cubism5.0自定义看板娘搭建</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.postimg.cc/CxGRhTpQ/e08087412710590d39be232cd643f10f.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">许木</div><div class="author-info__description">闭嘴！再叫就打你嘴里</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xudamu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number"></span> <span class="toc-text">开始</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/4748fe5d0a70/" title="对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试"><img src="https://i.postimg.cc/kgQV00WW/live2d.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试"/></a><div class="content"><a class="title" href="/posts/4748fe5d0a70/" title="对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试">对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试</a><time datetime="2024-07-18T00:05:23.000Z" title="发表于 2024-07-18 08:05:23">2024-07-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f407262d9961/" title="hexo+buuterfly+Cubism5.0自定义看板娘搭建"><img src="https://i.postimg.cc/J08PJYCT/doro.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo+buuterfly+Cubism5.0自定义看板娘搭建"/></a><div class="content"><a class="title" href="/posts/f407262d9961/" title="hexo+buuterfly+Cubism5.0自定义看板娘搭建">hexo+buuterfly+Cubism5.0自定义看板娘搭建</a><time datetime="2024-07-11T03:02:30.000Z" title="发表于 2024-07-11 11:02:30">2024-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/c76cf8828a3b/" title="xxx"><img src="https://i.postimg.cc/gJgW44Fs/sdfjlasdflasdjfiugg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="xxx"/></a><div class="content"><a class="title" href="/posts/c76cf8828a3b/" title="xxx">xxx</a><time datetime="2024-07-08T10:51:11.000Z" title="发表于 2024-07-08 18:51:11">2024-07-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d557603f916a/" title="测试博客"><img src="https://i.postimg.cc/QdyydPgc/bd977f420a02f9de631c0c8dd0ef1d36.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="测试博客"/></a><div class="content"><a class="title" href="/posts/d557603f916a/" title="测试博客">测试博客</a><time datetime="2024-07-08T10:27:51.000Z" title="发表于 2024-07-08 18:27:51">2024-07-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By 许木</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas id="universe"></canvas><script src="/js/universe.js"></script><canvas id="live2d"></canvas><script src="/styles/fish.js"></script><script type="text/javascript"> var resourcesPath = 'https://cdn.jsdelivr.net/gh/xudamu/Doro@for_blog/';var backImageName = '';var modelDir = ['Doro']; initDefine(resourcesPath, backImageName, modelDir); </script><script>document.getElementById('live2d').setAttribute('height', '300');</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
