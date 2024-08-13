@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>自己愛的な人です</title>
+  <icon>http://example.com/icon.png</icon>
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2024-08-12T22:35:59.522Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>许木</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>考核须知</title>
+    <link href="http://example.com/posts/0a3e0b83a0aa/"/>
+    <id>http://example.com/posts/0a3e0b83a0aa/</id>
+    <published>2024-08-11T14:30:04.000Z</published>
+    <updated>2024-08-12T22:35:59.522Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;i-考核的实质：&quot;&gt;&lt;a href=&quot;#i-考核的实质：&quot; class=&quot;headerlink&quot; title=&quot;i. 考核的实质：&quot;&gt;&lt;/a&gt;i. 考核的实质：&lt;/h4&gt;&lt;p&gt;考察同学们的自学能力、搜索信息的能力，即使是零基础，也不要气馁，我们会从每周提交的</summary>
+        
+      
+    
+    
+    
+    
+    <category term="竞赛" scheme="http://example.com/tags/%E7%AB%9E%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络空间安全竞赛基地以及数计CTF部入门</title>
+    <link href="http://example.com/posts/dfad4d07a28f/"/>
+    <id>http://example.com/posts/dfad4d07a28f/</id>
+    <published>2024-08-11T12:39:02.000Z</published>
+    <updated>2024-08-12T22:48:37.356Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;你好亲爱的学弟学妹：&lt;/p&gt;
+&lt;p&gt;​			欢迎来到网络空间安全竞赛基地以及 CTF</summary>
+        
+      
+    
+    
+    
+    
+    <category term="竞赛" scheme="http://example.com/tags/%E7%AB%9E%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一次渗透题目回顾</title>
+    <link href="http://example.com/posts/b14b406e218d/"/>
+    <id>http://example.com/posts/b14b406e218d/</id>
+    <published>2024-08-11T08:51:58.000Z</published>
+    <updated>2024-08-12T07:41:21.929Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先这次是第一届长城杯决赛的企业环境题目回顾，很多地方都是值得小白一看的，这里做详细介绍。由于我并没有存相关图片，这里展示的图片都将是借用别人的图片&lt;/p&gt;
+&lt;h1 id=&quot;开打！&quot;&gt;&lt;a href=&quot;#开打！&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="渗透" scheme="http://example.com/tags/%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对Live2DViewerEX生成可用mono-2.0-bdwgc.dll的尝试</title>
+    <link href="http://example.com/posts/4748fe5d0a70/"/>
+    <id>http://example.com/posts/4748fe5d0a70/</id>
+    <published>2024-07-18T00:05:23.000Z</published>
+    <updated>2024-07-18T03:39:57.454Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先我也是创建完这个blog的看板娘后发现的live2DviewerEX，突发奇想能不能将Live2DViewerEX里面的看板娘导出来，结果发现格式不一样，这里是被加密过的，于是乎就开始在网上搜索解密。在我实现过程中，网上生成mono-2.0-bdwgc.dll对我这种对</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo+buuterfly+Cubism5.0自定义看板娘搭建</title>
+    <link href="http://example.com/posts/f407262d9961/"/>
+    <id>http://example.com/posts/f407262d9961/</id>
+    <published>2024-07-11T03:02:30.000Z</published>
+    <updated>2024-07-11T03:19:27.758Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;由于我的模型是新模型(SDK5.0&amp;#x2F;Cubism5.0的版本)，文件格式为moc3，github上helper-llive2d是不支持这个内核版本，并且live2d-moc3，所以导致现在网上的一些教程是不匹配的，不能实现这个版本看板娘的搭建&lt;/p&gt;
+&lt;p&gt;链接如</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>xxx</title>
+    <link href="http://example.com/posts/c76cf8828a3b/"/>
+    <id>http://example.com/posts/c76cf8828a3b/</id>
+    <published>2024-07-08T10:51:11.000Z</published>
+    <updated>2024-08-11T08:52:39.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="caosuan" scheme="http://example.com/tags/caosuan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试博客</title>
+    <link href="http://example.com/posts/d557603f916a/"/>
+    <id>http://example.com/posts/d557603f916a/</id>
+    <published>2024-07-08T10:27:51.000Z</published>
+    <updated>2024-07-10T02:11:24.037Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;超算测试第一博客&quot;&gt;&lt;a href=&quot;#超算测试第一博客&quot; class=&quot;headerlink&quot; title=&quot;超算测试第一博客&quot;&gt;&lt;/a&gt;超算测试第一博客&lt;/h1&gt;&lt;h2 id=&quot;自我介绍&quot;&gt;&lt;a href=&quot;#自我介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="caosuan" scheme="http://example.com/tags/caosuan/"/>
+    
+  </entry>
+  
+</feed>
