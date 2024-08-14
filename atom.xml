@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-12T22:35:59.522Z</updated>
+  <updated>2024-08-14T03:25:55.938Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给博客创建 RSS 订阅源的三种方法</title>
+    <link href="http://example.com/posts/335ca95a5110/"/>
+    <id>http://example.com/posts/335ca95a5110/</id>
+    <published>2024-08-14T00:16:20.000Z</published>
+    <updated>2024-08-14T03:25:55.938Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先是介绍我的 Blog 正在使用的方法，其次是一个较为普遍性的方法，最后是通过 RSSHub 的方法&lt;/p&gt;
+&lt;h2 id=&quot;1-hexo-generator-feed&quot;&gt;&lt;a href=&quot;#1-hexo-generator-feed&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>考核须知</title>
