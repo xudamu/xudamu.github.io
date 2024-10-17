@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-10-17T08:38:47.861Z</updated>
+  <updated>2024-10-17T09:55:07.490Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>提权</title>
+    <link href="http://example.com/posts/d2fb2fe6444a/"/>
+    <id>http://example.com/posts/d2fb2fe6444a/</id>
+    <published>2024-10-17T09:32:00.000Z</published>
+    <updated>2024-10-17T09:55:07.490Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;windows提权&lt;/p&gt;
+&lt;p&gt;linux提权&lt;/p&gt;
+&lt;p&gt;数据库提权&lt;/p&gt;
+&lt;p&gt;第三方软件提权&lt;/p&gt;
+&lt;h1 id=&quot;windows提权&quot;&gt;&lt;a href=&quot;#windows提权&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="渗透" scheme="http://example.com/tags/%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>横向移动</title>
+    <link href="http://example.com/posts/039900e735dd/"/>
+    <id>http://example.com/posts/039900e735dd/</id>
+    <published>2024-10-17T08:59:42.000Z</published>
+    <updated>2024-10-17T09:23:59.762Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;发现了内网渗透的狠资料，很强&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="渗透" scheme="http://example.com/tags/%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>谢罪篇</title>
     <link href="http://example.com/posts/e1a9176bc199/"/>
     <id>http://example.com/posts/e1a9176bc199/</id>
     <published>2024-10-17T07:50:49.000Z</published>
-    <updated>2024-10-17T08:38:47.861Z</updated>
+    <updated>2024-10-17T08:39:54.159Z</updated>
     
     
       
@@ -209,7 +260,7 @@
     <link href="http://example.com/posts/d557603f916a/"/>
     <id>http://example.com/posts/d557603f916a/</id>
     <published>2024-07-08T10:27:51.000Z</published>
-    <updated>2024-07-10T02:11:24.037Z</updated>
+    <updated>2024-10-17T11:47:50.823Z</updated>
     
     
       
