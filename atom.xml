@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-14T03:25:55.938Z</updated>
+  <updated>2024-10-17T08:38:47.861Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>谢罪篇</title>
+    <link href="http://example.com/posts/e1a9176bc199/"/>
+    <id>http://example.com/posts/e1a9176bc199/</id>
+    <published>2024-10-17T07:50:49.000Z</published>
+    <updated>2024-10-17T08:38:47.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;谢罪了谢罪了&quot;&gt;&lt;a href=&quot;#谢罪了谢罪了&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="碎碎念" scheme="http://example.com/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>给博客创建 RSS 订阅源的三种方法</title>
@@ -45,7 +68,7 @@
     <link href="http://example.com/posts/0a3e0b83a0aa/"/>
     <id>http://example.com/posts/0a3e0b83a0aa/</id>
     <published>2024-08-11T14:30:04.000Z</published>
-    <updated>2024-08-12T22:35:59.522Z</updated>
+    <updated>2024-10-17T08:32:01.577Z</updated>
     
     
       
@@ -59,7 +82,7 @@
     
     
     
-    <category term="竞赛" scheme="http://example.com/tags/%E7%AB%9E%E8%B5%9B/"/>
+    <category term="基地" scheme="http://example.com/tags/%E5%9F%BA%E5%9C%B0/"/>
     
   </entry>
   
@@ -68,7 +91,7 @@
     <link href="http://example.com/posts/dfad4d07a28f/"/>
     <id>http://example.com/posts/dfad4d07a28f/</id>
     <published>2024-08-11T12:39:02.000Z</published>
-    <updated>2024-08-12T22:48:37.356Z</updated>
+    <updated>2024-10-17T08:31:29.585Z</updated>
     
     
       
@@ -83,7 +106,7 @@
     
     
     
-    <category term="竞赛" scheme="http://example.com/tags/%E7%AB%9E%E8%B5%9B/"/>
+    <category term="基地" scheme="http://example.com/tags/%E5%9F%BA%E5%9C%B0/"/>
     
   </entry>
   
@@ -92,14 +115,14 @@
     <link href="http://example.com/posts/b14b406e218d/"/>
     <id>http://example.com/posts/b14b406e218d/</id>
     <published>2024-08-11T08:51:58.000Z</published>
-    <updated>2024-08-17T01:18:58.760Z</updated>
+    <updated>2024-08-17T01:21:00.732Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;首先这次是第一届长城杯决赛的企业环境题目回顾，很多地方都是值得小白一看的，这里做详细介绍。由于我并没有存相关图片，这里展示的图片都将是借用别人的图片&lt;/p&gt;
+    <summary type="html">&lt;p&gt;首先这次是第一届长城杯决赛的企业环境题目回顾，内容写的比较简单，还请大佬不要拷打我::&amp;gt;_&amp;lt;::。由于我并没有存相关图片，这里展示的图片都将是借用别人的图片&lt;/p&gt;
 &lt;h1 id=&quot;开打！&quot;&gt;&lt;a href=&quot;#开打！&quot; class=&quot;headerlink&quot;</summary>
         
       
