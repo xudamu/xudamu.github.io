@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-10-17T09:55:07.490Z</updated>
+  <updated>2024-10-29T01:13:06.401Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免杀(未完结)</title>
+    <link href="http://example.com/posts/bcad49a1d479/"/>
+    <id>http://example.com/posts/bcad49a1d479/</id>
+    <published>2024-10-29T01:09:50.000Z</published>
+    <updated>2024-10-29T01:13:06.401Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://xz.aliyun.com/t/14215&quot;&gt;https://xz.aliyun.com/t/14215&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;基础汇编&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="渗透" scheme="http://example.com/tags/%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024SDC与GEEKCON参会总结</title>
+    <link href="http://example.com/posts/5dd43dde7349/"/>
+    <id>http://example.com/posts/5dd43dde7349/</id>
+    <published>2024-10-29T01:06:21.000Z</published>
+    <updated>2024-10-29T01:09:00.591Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这次的会议，见了禅叁师傅、默文师傅、gosh师傅、henry大师傅，xsh大师傅，还有几位师傅。&lt;/p&gt;
+&lt;p&gt;禅叁师傅人挺好的，带我了解了一下几位师傅。默文和gosh师傅很友好，henry、xsh大师傅很厉害。除此之外我一无所知，我只知道师傅们很强，但是我不知道师傅们为什</summary>
+        
+      
+    
+    
+    
+    
+    <category term="会议" scheme="http://example.com/tags/%E4%BC%9A%E8%AE%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>提权</title>
@@ -119,7 +168,7 @@
     <link href="http://example.com/posts/0a3e0b83a0aa/"/>
     <id>http://example.com/posts/0a3e0b83a0aa/</id>
     <published>2024-08-11T14:30:04.000Z</published>
-    <updated>2024-10-17T08:32:01.577Z</updated>
+    <updated>2024-10-29T01:20:57.882Z</updated>
     
     
       
@@ -142,7 +191,7 @@
     <link href="http://example.com/posts/dfad4d07a28f/"/>
     <id>http://example.com/posts/dfad4d07a28f/</id>
     <published>2024-08-11T12:39:02.000Z</published>
-    <updated>2024-10-17T08:31:29.585Z</updated>
+    <updated>2024-10-29T01:20:58.774Z</updated>
     
     
       
